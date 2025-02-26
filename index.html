@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="mr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>आचार्य अत्रे माहिती</title>
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        body {
+            background-image: url('i.png');
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .content-container {
+            max-width: 92%;
+            margin: 10px auto;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.95);
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+
+        h1, h2, h3 {
+            color: #2c3e50;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .author-image {
+            text-align: center;
+            margin: 30px 0;
+        }
+
+        .author-image img {
+            max-width: 100%;
+            max-height: 500px;
+            border-radius: 25px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease;
+        }
+        p {
+            font-size: 1.2em;
+            text-align: center;
+        }
+
+        .author-image img:hover {
+            transform: scale(1.05);
+        }
+
+        ul {
+            list-style-type: none;
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 10px;
+            position: relative;
+            padding-left: 20px;
+        }
+
+        li:before {
+            content: "•";
+            color: #4CAF50;
+            font-weight:bold;
+            position: absolute;
+            left: 0;
+            height: 10px;
+        }
+
+        .translate-btn {
+            display: block;
+            margin: 30px auto;
+            padding: 12px 25px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+        }
+        .translate-btn:hover {
+            background-color: #45a049;
+            transform: translateY(-2px);
+        }
+
+        @media (max-width: 768px) {
+            .content-container {
+                padding: 15px;
+            }
+
+            .translate-btn {
+                padding: 10px 20px;
+                font-size: 14px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .content-container {
+                padding: 10px;
+            }
+
+            .translate-btn {
+                padding: 8px 15px;
+                font-size: 22px;
+            }
+
+            h1, h2, h3 {
+                font-size: 1.2em;
+            }
+
+            .author-image img {
+                max-width: 100%;
+                max-height: 300px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="content-container">
+        <h1>आचार्य अत्रे</h1>
+        <div class="author-image">
+            <img src="image.png" alt="आचार्य अत्रे">
+        </div>
+
+        <div id="marathi-content">
+            <p>(१३ ऑगस्ट १८९८ - १३ जून १९६९)</p>
+            <p>आचार्य अत्रे यांचे व्यक्तिमत्व लेखक, कवी, नाटककार, संपादक, चित्रपट निर्माते, राजकारणी, शिक्षणतज्ञ, धुरंधर वक्ते अशा बहुरंगात रंगलेले आहे. बहुमुखी प्रतिभा असलेल्या आचार्य अत्रे यांची विनोदबुद्धी त्यांच्या सर्वच कार्यक्षेत्रात आढळते. “संयुक्त महाराष्ट्राच्या” चळवळीचे आघाडीचे नेते असलेल्या आचार्य अत्रेंच्या “श्यामची आई ” या चित्रपटाला पहिला “राष्ट्रीय फिल्म पुरस्कार सुवर्ण कमळ” मिळाला.</p>
+
+            <h2>महत्वाचे साहित्यिक योगदान:</h2>
+            <h3>शाळेची क्रमिक पुस्तके</h3>
+            <h3>साप्ताहिक:</h3>
+            <ul>
+                <li>नवयुग</li>
+                <li>मराठा</li>
+            </ul>
+            <h3>२५ प्रसिद्ध व गाजलेली नाटके</h3>
+
+            <h3>काव्य संग्रह:</h3>
+            <ul>
+                <li>गीतगंगा</li>
+                <li>झेंडूची फुले</li>
+            </ul>
+
+            <h3>आत्मचरित्र:</h3>
+            <ul>
+                <li>कऱ्हेचे पाणी</li>
+            </ul>
+
+            <h3>कादंबरी:</h3>
+            <ul>
+                <li>चागुणा</li>
+                <li>मोहित्यांचा शाप</li>
+            </ul>
+
+            <h3>पुरस्कार:</h3>
+            <ul>
+                <li>विष्णुदास भावे पुरस्कार</li>
+            </ul>
+        </div>
+
+        <button class="translate-btn">English </button>
+    </div>
+
+    <script>
+        const translateBtn = document.querySelector(".translate-btn");
+        const marathiContent = document.getElementById("marathi-content");
+        let isMarathi = true;
+
+        translateBtn.addEventListener("click", function() {
+            if (isMarathi) {
+                // Switch to English
+                translateBtn.textContent = "मराठी ";
+                document.documentElement.lang = "en";
+                marathiContent.innerHTML = `
+                    <p>(13 August 1898 - 13 June 1969)</p>
+                    <p>Acharya Atre's personality is colored in various shades such as writer, poet, playwright, editor, film producer, politician, educationist, and powerful speaker. Acharya Atre's humor is evident in all his fields of work. Acharya Atre, a leading leader of the "United Maharashtra" movement, received the first "National Film Award Golden Lotus" for his film "Shyamchi Aai".</p>
+
+                    <h2>Important Literary Contributions:</h2>
+                    <h3>School Textbooks</h3>
+                    <h3>Weekly:</h3>
+                    <ul>
+                        <li>Navyug</li>
+                        <li>Maratha</li>
+                    </ul>
+                    <h3>25 Famous and Popular Plays</h3>
+
+                    <h3>Poetry Collections:</h3>
+                    <ul>
+                        <li>Geetganga</li>
+                        <li>Zendu's Flowers</li>
+                    </ul>
+
+                    <h3>Autobiography:</h3>
+                    <ul>
+                        <li>Karheche Pani</li>
+                    </ul>
+
+                    <h3>Novels:</h3>
+                    <ul>
+                        <li>Chaguna</li>
+                        <li>Mohityancha Shap</li>
+                    </ul>
+
+                    <h3>Awards:</h3>
+                    <ul>
+                        <li>Vishnudas Bhave Award</li>
+                    </ul>
+                `;
+            } else {
+                // Switch back to Marathi
+                document.documentElement.lang = "mr";
+                location.reload();
+            }
+            isMarathi = !isMarathi;
+        });
+    </script>
+</body>
+</html>
